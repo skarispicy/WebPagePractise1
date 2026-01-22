@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-    /* Nano Banana Theme - Yellow/Tech/Glass */
-    --bg-color: #FEF9C3;
-    /* Light Cream Yellow */
-    --text-main: #1E1E1E;
-    /* Nano Black */
-    --primary-accent: #FFE135;
-    /* Banana Yellow */
-    --secondary-accent: #FACC15;
-    /* Deep Gold */
-    --cta-color: #1E1E1E;
-    /* High contrast CTA */
+    /* Tech Innovation Theme - Neon on Dark */
+    --bg-color: #0a0a0a;
+    /* Deep Black for maximum contrast */
+    --text-main: #ffffff;
+    /* Pure White text */
+    --primary-accent: #0066ff;
+    /* Electric Blue */
+    --secondary-accent: #00ffff;
+    /* Neon Cyan */
+    --cta-color: #0066ff;
+    /* Electric Blue CTA */
 
-    /* Glassmorphism Tokens */
-    --glass-bg: rgba(255, 255, 255, 0.6);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.4);
-    --glass-blur: blur(16px);
-    --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+    /* Glassmorphism Tokens - Dark Theme */
+    --glass-bg: rgba(30, 30, 30, 0.7);
+    --glass-border: 1px solid rgba(0, 102, 255, 0.3);
+    --glass-blur: blur(20px);
+    --glass-shadow: 0 8px 32px rgba(0, 102, 255, 0.2);
 
     /* Typography */
     --font-main: 'Inter', sans-serif;
@@ -26,12 +26,14 @@
     --spacing-container: 1200px;
     --header-height: 80px;
 
-    /* Shadows & Borders */
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
-    --border-radius-base: 24px;
-    /* Organic/Banana Roundness */
+    /* Shadows & Borders with Neon Glow */
+    --shadow-sm: 0 2px 8px rgba(0, 102, 255, 0.15);
+    --shadow-md: 0 6px 16px rgba(0, 102, 255, 0.25);
+    --shadow-lg: 0 12px 32px rgba(0, 102, 255, 0.35);
+    --neon-glow: 0 0 20px rgba(0, 102, 255, 0.6), 0 0 40px rgba(0, 102, 255, 0.3);
+    --cyan-glow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 40px rgba(0, 255, 255, 0.3);
+    --border-radius-base: 16px;
+    /* Modern, sleek roundness */
 
     /* Transitions */
     --transition-fast: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -51,8 +53,8 @@ body {
     overflow-x: hidden;
     line-height: 1.6;
     background-image:
-        radial-gradient(circle at 10% 20%, rgba(255, 225, 53, 0.4) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(250, 204, 21, 0.3) 0%, transparent 40%);
+        radial-gradient(circle at 10% 20%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
 }
 
 h1,
@@ -88,11 +90,12 @@ button {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #1E1E1E 0%, #4B5563 100%);
+    background: linear-gradient(135deg, #0066ff 0%, #00ffff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(0, 102, 255, 0.5));
 }
 
 .glass-panel {
@@ -104,25 +107,27 @@ button {
     border-radius: var(--border-radius-base);
 }
 
-/* Banana Buttons */
+/* Tech Innovation Buttons */
 .btn-primary {
     background: var(--cta-color);
     color: white;
-    /* Contrast text on black button */
     padding: 14px 28px;
     border-radius: 50px;
     /* Pill shape */
-    border: none;
+    border: 2px solid var(--primary-accent);
     font-weight: 600;
     font-size: 1rem;
     transition: all var(--transition-fast);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--neon-glow);
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    background: #000;
+    box-shadow: 0 0 30px rgba(0, 102, 255, 0.8), 0 0 60px rgba(0, 102, 255, 0.4);
+    background: #0052cc;
+    border-color: var(--secondary-accent);
 }
 
 /* Scroll Reveal Animations */

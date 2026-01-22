@@ -1,9 +1,9 @@
 .footer {
-    background-color: var(--text-main);
-    /* Dark footer in brutalist theme */
+    background-color: #0a0a0a;
     color: white;
     padding: 80px 0 32px;
-    border-top: 4px solid var(--primary-accent);
+    border-top: 4px solid var(--secondary-accent);
+    box-shadow: 0 -4px 30px rgba(0, 255, 255, 0.2);
 }
 
 .footer-content {
@@ -39,24 +39,28 @@
 .social-link {
     color: white;
     transition: transform var(--transition-fast);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 102, 255, 0.2);
     padding: 8px;
     border-radius: 50%;
+    border: 1px solid rgba(0, 102, 255, 0.3);
 }
 
 .social-link:hover {
-    color: #1E1E1E;
-    background: #FFE135;
+    color: white;
+    background: var(--secondary-accent);
     transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+    border-color: var(--secondary-accent);
 }
 
 .footer-heading {
     font-size: 1.1rem;
     margin-bottom: 24px;
-    color: #FFE135;
+    color: var(--primary-accent);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 102, 255, 0.5);
 }
 
 .footer-list li {
@@ -88,8 +92,8 @@
 
 .newsletter-form input {
     padding: 10px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 102, 255, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     color: white;
     width: 100%;
     border-radius: 50px;
@@ -98,24 +102,28 @@
 
 .newsletter-form input:focus {
     outline: none;
-    border-color: #FFE135;
+    border-color: var(--secondary-accent);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
 }
 
 .newsletter-form button {
     padding: 10px 20px;
-    background: #FFE135;
-    color: #1E1E1E;
-    border: none;
+    background: var(--primary-accent);
+    color: white;
+    border: 2px solid var(--primary-accent);
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 700;
     cursor: pointer;
     transition: transform 0.2s ease;
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.4);
 }
 
 .newsletter-form button:hover {
-    background: white;
+    background: #0052cc;
     transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 102, 255, 0.7);
+    border-color: var(--secondary-accent);
 }
 
 .footer-bottom {
