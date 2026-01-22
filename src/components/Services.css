@@ -12,17 +12,17 @@
 }
 
 .section-title {
-    font-size: 3rem;
-    margin-bottom: 16px;
+    font-size: 4rem;
+    margin-bottom: 24px;
     color: var(--text-main);
-    text-transform: none;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
 }
 
 .section-subtitle {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 1.25rem;
-    font-family: var(--font-main);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .services-grid {
@@ -56,34 +56,34 @@
 }
 
 .icon-wrapper {
-    width: 64px;
-    height: 64px;
-    background: rgba(0, 102, 255, 0.15);
-    border: 2px solid var(--primary-accent);
-    border-radius: 20px;
+    width: 56px;
+    height: 56px;
+    background: transparent;
+    border: 1px solid rgba(0, 102, 255, 0.3);
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     color: var(--secondary-accent);
-    box-shadow: var(--neon-glow);
     transition: all var(--transition-fast);
 }
 
 .service-card:hover .icon-wrapper {
-    transform: scale(1.1);
-    background: rgba(0, 102, 255, 0.25);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.3);
+    transform: scale(1.1) rotate(5deg);
     border-color: var(--secondary-accent);
+    box-shadow: 0 0 24px rgba(0, 255, 255, 0.2);
 }
 
 .service-title {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
     font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .service-description {
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.5;
+    font-size: 0.95rem;
 }

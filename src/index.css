@@ -1,42 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Bricolage+Grotesque:wght@300;400;500;600&display=swap');
 
 :root {
     /* Tech Innovation Theme - Neon on Dark */
-    --bg-color: #0a0a0a;
-    /* Deep Black for maximum contrast */
+    --bg-color: #050505;
+    /* Even deeper black */
     --text-main: #ffffff;
-    /* Pure White text */
     --primary-accent: #0066ff;
-    /* Electric Blue */
     --secondary-accent: #00ffff;
-    /* Neon Cyan */
     --cta-color: #0066ff;
-    /* Electric Blue CTA */
 
     /* Glassmorphism Tokens - Dark Theme */
-    --glass-bg: rgba(30, 30, 30, 0.7);
-    --glass-border: 1px solid rgba(0, 102, 255, 0.3);
-    --glass-blur: blur(20px);
-    --glass-shadow: 0 8px 32px rgba(0, 102, 255, 0.2);
+    --glass-bg: rgba(15, 15, 15, 0.7);
+    --glass-border: 1px solid rgba(0, 102, 255, 0.2);
+    --glass-blur: blur(24px);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 
     /* Typography */
-    --font-main: 'Inter', sans-serif;
-
-    /* Spacing */
-    --spacing-container: 1200px;
-    --header-height: 80px;
+    --font-header: 'Syne', sans-serif;
+    --font-body: 'Bricolage Grotesque', sans-serif;
 
     /* Shadows & Borders with Neon Glow */
-    --shadow-sm: 0 2px 8px rgba(0, 102, 255, 0.15);
-    --shadow-md: 0 6px 16px rgba(0, 102, 255, 0.25);
-    --shadow-lg: 0 12px 32px rgba(0, 102, 255, 0.35);
-    --neon-glow: 0 0 20px rgba(0, 102, 255, 0.6), 0 0 40px rgba(0, 102, 255, 0.3);
-    --cyan-glow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 40px rgba(0, 255, 255, 0.3);
-    --border-radius-base: 16px;
-    /* Modern, sleek roundness */
+    --shadow-sm: 0 2px 8px rgba(0, 102, 255, 0.1);
+    --shadow-md: 0 6px 16px rgba(0, 102, 255, 0.2);
+    --shadow-lg: 0 12px 32px rgba(0, 102, 255, 0.3);
+    --neon-glow: 0 0 20px rgba(0, 102, 255, 0.5), 0 0 40px rgba(0, 102, 255, 0.2);
+    --cyan-glow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.2);
+    --border-radius-base: 12px;
+    /* Sharper, more professional */
 
     /* Transitions */
-    --transition-fast: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-fast: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {
@@ -48,11 +41,12 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-main);
-    font-family: var(--font-main);
+    font-family: var(--font-body);
     min-height: 100vh;
     overflow-x: hidden;
-    line-height: 1.6;
+    line-height: 1.5;
     position: relative;
+    font-weight: 300;
 }
 
 body::before {
@@ -63,9 +57,23 @@ body::before {
     width: 100%;
     height: 100%;
     background: url('https://grainy-gradients.vercel.app/noise.svg');
-    opacity: 0.05;
+    opacity: 0.04;
     pointer-events: none;
     z-index: 9999;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+    background-size: 100% 3px, 3px 100%;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.3;
 }
 
 .mesh-gradient {
@@ -121,9 +129,11 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: var(--font-header);
     font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
 }
 
 a {

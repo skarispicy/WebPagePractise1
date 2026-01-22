@@ -44,7 +44,14 @@ const Footer = () => {
                         <h4 className="footer-heading">Stay Updated</h4>
                         <p className="newsletter-text">Subscribe to our newsletter for the latest design trends.</p>
                         <form className="newsletter-form">
-                            <input type="email" placeholder="Enter your email" className="glass-panel" />
+                            <input
+                                type="email"
+                                id="newsletter-email"
+                                name="email"
+                                placeholder="Enter your email"
+                                className="glass-panel"
+                                required
+                            />
                             <button type="submit">Subscribe</button>
                         </form>
                     </div>
