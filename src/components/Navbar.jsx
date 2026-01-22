@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import Magnetic from './Magnetic';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -25,7 +26,9 @@ const Navbar = () => {
                     <a href="#testimonials" className="nav-link">Reviews</a>
                 </div>
 
-                <button className="cta-button">Get Started</button>
+                <Magnetic strength={0.25}>
+                    <button className="cta-button">Get Started</button>
+                </Magnetic>
             </div>
         </nav>
     );

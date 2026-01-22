@@ -55,7 +55,13 @@ const Services = () => {
 
                 <div className="services-grid">
                     {services.map((service, index) => (
-                        <ScrollReveal key={index} className="service-card glass-panel" style={{ '--accent-color': service.color }} threshold={0.1 * (index % 3)}>
+                        <ScrollReveal
+                            key={index}
+                            className="service-card glass-panel"
+                            style={{ '--accent-color': service.color }}
+                            delay={index * 0.1}
+                            threshold={0.1}
+                        >
                             <div className="icon-wrapper">
                                 {service.icon}
                             </div>

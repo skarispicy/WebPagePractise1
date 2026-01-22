@@ -1,6 +1,7 @@
 import React from 'react';
 import './Portfolio.css';
 import ScrollReveal from './ScrollReveal';
+import Magnetic from './Magnetic';
 
 const projects = [
     {
@@ -42,8 +43,8 @@ const Portfolio = () => {
                 </ScrollReveal>
 
                 <div className="portfolio-grid">
-                    {projects.map((project) => (
-                        <ScrollReveal key={project.id} className="project-card group" threshold={0.1}>
+                    {projects.map((project, index) => (
+                        <ScrollReveal key={project.id} className="project-card group" threshold={0.1} delay={index * 0.1}>
                             <div className="project-image-wrapper">
                                 <img src={project.image} alt={project.title} className="project-image" />
                                 <div className="project-overlay glass-panel">
@@ -56,7 +57,9 @@ const Portfolio = () => {
                                             ))}
                                         </div>
                                     </div>
-                                    <button className="view-btn">View Project</button>
+                                    <Magnetic strength={0.3}>
+                                        <button className="view-btn">View Project</button>
+                                    </Magnetic>
                                 </div>
                             </div>
                         </ScrollReveal>

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Hero.css';
 import ScrollReveal from './ScrollReveal';
+import Magnetic from './Magnetic';
 
 const Hero = () => {
     return (
@@ -23,8 +24,12 @@ const Hero = () => {
                     </p>
 
                     <div className="hero-actions">
-                        <button className="btn-primary">View Our Work</button>
-                        <button className="btn-secondary">Book a Call</button>
+                        <Magnetic strength={0.2}>
+                            <button className="btn-primary">View Our Work</button>
+                        </Magnetic>
+                        <Magnetic strength={0.2}>
+                            <button className="btn-secondary">Book a Call</button>
+                        </Magnetic>
                     </div>
                 </ScrollReveal>
 

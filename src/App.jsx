@@ -10,6 +10,10 @@ import './App.css';
 function App() {
     return (
         <div className="app">
+            <div className="mesh-gradient">
+                <div className="mesh-orb orb-blue"></div>
+                <div className="mesh-orb orb-cyan"></div>
+            </div>
             <Navbar />
             <main>
                 <Hero />
