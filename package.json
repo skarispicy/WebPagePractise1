@@ -7,7 +7,12 @@
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint .",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "git:feature-start": "./scripts/git-workflow.sh feature-start",
+        "git:feature-finish": "./scripts/git-workflow.sh feature-finish",
+        "git:promote-dev": "./scripts/git-workflow.sh promote-dev-test",
+        "git:promote-main": "./scripts/git-workflow.sh promote-test-main",
+        "git:sync": "./scripts/git-workflow.sh sync"
     },
     "dependencies": {
         "lucide-react": "^0.473.0",
