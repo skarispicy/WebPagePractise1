@@ -1,0 +1,134 @@
+.footer {
+    background-color: var(--text-main);
+    /* Dark footer in brutalist theme */
+    color: white;
+    padding: 80px 0 32px;
+    border-top: 4px solid var(--primary-accent);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer-tagline {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 16px 0 24px;
+    max-width: 300px;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-link {
+    color: white;
+    transition: transform var(--transition-fast);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.social-link:hover {
+    color: #1E1E1E;
+    background: #FFE135;
+    transform: translateY(-4px);
+}
+
+.footer-heading {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    color: #FFE135;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.footer-list li {
+    margin-bottom: 12px;
+}
+
+.footer-list a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: all var(--transition-fast);
+    border-left: none;
+    padding-left: 0;
+}
+
+.footer-list a:hover {
+    color: white;
+    padding-left: 4px;
+}
+
+.newsletter-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 8px;
+}
+
+.newsletter-form input {
+    padding: 10px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    width: 100%;
+    border-radius: 50px;
+    font-weight: 400;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: #FFE135;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background: #FFE135;
+    color: #1E1E1E;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.newsletter-form button:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+.legal-links {
+    display: flex;
+    gap: 24px;
+}

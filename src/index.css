@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* Nano Banana Theme - Yellow/Tech/Glass */
+    --bg-color: #FEF9C3;
+    /* Light Cream Yellow */
+    --text-main: #1E1E1E;
+    /* Nano Black */
+    --primary-accent: #FFE135;
+    /* Banana Yellow */
+    --secondary-accent: #FACC15;
+    /* Deep Gold */
+    --cta-color: #1E1E1E;
+    /* High contrast CTA */
+
+    /* Glassmorphism Tokens */
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.4);
+    --glass-blur: blur(16px);
+    --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+
+    /* Typography */
+    --font-main: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacing-container: 1200px;
+    --header-height: 80px;
+
+    /* Shadows & Borders */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
+    --border-radius-base: 24px;
+    /* Organic/Banana Roundness */
+
+    /* Transitions */
+    --transition-fast: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 225, 53, 0.4) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(250, 204, 21, 0.3) 0%, transparent 40%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: var(--font-main);
+    cursor: pointer;
+}
+
+/* Utilities */
+.container {
+    max-width: var(--spacing-container);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #1E1E1E 0%, #4B5563 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: var(--border-radius-base);
+}
+
+/* Banana Buttons */
+.btn-primary {
+    background: var(--cta-color);
+    color: white;
+    /* Contrast text on black button */
+    padding: 14px 28px;
+    border-radius: 50px;
+    /* Pill shape */
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: #000;
+}
+
+/* Scroll Reveal Animations */
+.reveal-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.reveal-fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

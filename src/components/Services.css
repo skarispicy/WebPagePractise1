@@ -1,0 +1,90 @@
+.services-section {
+    padding: 100px 0;
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    color: var(--text-main);
+    text-transform: none;
+    letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+    color: #4B5563;
+    font-size: 1.25rem;
+    font-family: var(--font-main);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.service-card {
+    padding: 40px;
+    background: white;
+    /* Clean white card */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(253, 224, 71, 0.5);
+    /* Yellow border hint */
+}
+
+/* Remove brutalist before/after */
+.service-card::before {
+    display: none;
+}
+
+.icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background: #FEF9C3;
+    /* Light banana bg */
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: #CA8A04;
+    /* Dark gold icon */
+    box-shadow: none;
+    transition: all var(--transition-fast);
+}
+
+.service-card:hover .icon-wrapper {
+    transform: scale(1.1);
+    background: #FDE047;
+    box-shadow: 0 4px 12px rgba(250, 204, 21, 0.3);
+}
+
+.service-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.service-description {
+    color: #4B5563;
+    line-height: 1.6;
+}

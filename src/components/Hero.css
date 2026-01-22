@@ -1,0 +1,255 @@
+.hero {
+    padding-top: calc(var(--header-height) + 60px);
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    /* Let body gradient show */
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    color: #854D0E;
+    background: rgba(254, 240, 138, 0.8);
+    border: 1px solid rgba(250, 204, 21, 0.4);
+    border-radius: 50px;
+    margin-bottom: 24px;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #CA8A04;
+    border-radius: 50%;
+    border: none;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
+    color: var(--text-main);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #4B5563;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-bottom: 40px;
+    border-left: none;
+    padding-left: 0;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-primary {
+    /* Defined in index.css */
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--text-main);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    background: white;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Visuals */
+.hero-visual {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Image Integration */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/nano-hero-bg.png') no-repeat center center/cover;
+    opacity: 0.15;
+    /* Subtle overlay behind content */
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* Restore Orbs for Nano Banana */
+.glowing-orb {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.orb-1 {
+    width: 300px;
+    height: 300px;
+    background: #FDE047;
+    /* Yellow */
+    top: 0;
+    right: 0;
+    animation: float 8s ease-in-out infinite;
+}
+
+.orb-2 {
+    width: 250px;
+    height: 250px;
+    background: #FACC15;
+    /* Darker Yellow */
+    bottom: 0;
+    left: 0;
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+/* Remove brutalist geometric backgrounds */
+.hero-visual::before,
+.hero-visual::after {
+    display: none;
+}
+
+.hero-card {
+    width: 100%;
+    max-width: 450px;
+    /* Slightly wider for mockup */
+    height: auto;
+    padding: 16px;
+    transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
+    transition: transform var(--transition-fast);
+    background: rgba(255, 255, 255, 0.65);
+    /* Glass override */
+    border-radius: 24px;
+}
+
+.hero-card:hover {
+    transform: perspective(1000px) rotateY(0) rotateX(0);
+}
+
+.card-header {
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    /* Soft border */
+    padding-bottom: 12px;
+}
+
+.hero-mockup-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.traffic-lights {
+    display: flex;
+    gap: 8px;
+}
+
+.traffic-lights span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+}
+
+.traffic-lights span:nth-child(1) {
+    background: #ff5f57;
+}
+
+.traffic-lights span:nth-child(2) {
+    background: #febc2e;
+}
+
+.traffic-lights span:nth-child(3) {
+    background: #28c840;
+}
+
+
+.skeleton-line {
+    height: 12px;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.full {
+    width: 100%;
+}
+
+.three-quarter {
+    width: 75%;
+}
+
+.skeleton-box {
+    height: 100px;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    /* No border for brutalism */
+    border-radius: 12px;
+    margin-top: 24px;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-20px, 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-subtitle {
+        border: none;
+        padding: 0;
+    }
+}
