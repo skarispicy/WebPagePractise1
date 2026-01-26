@@ -3,16 +3,16 @@
 :root {
     /* Tech Innovation Theme - Neon on Dark */
     --bg-color: #050505;
-    /* Even deeper black */
     --text-main: #ffffff;
     --primary-accent: #0066ff;
     --secondary-accent: #00ffff;
     --cta-color: #0066ff;
+    --header-height: 90px;
 
-    /* Glassmorphism Tokens - Dark Theme */
-    --glass-bg: rgba(15, 15, 15, 0.7);
-    --glass-border: 1px solid rgba(0, 102, 255, 0.2);
-    --glass-blur: blur(24px);
+    /* Glassmorphism Tokens - Dark Theme & Refined */
+    --glass-bg: rgba(20, 20, 20, 0.6);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+    --glass-blur: blur(16px);
     --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 
     /* Typography */
@@ -26,7 +26,6 @@
     --neon-glow: 0 0 20px rgba(0, 102, 255, 0.5), 0 0 40px rgba(0, 102, 255, 0.2);
     --cyan-glow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.2);
     --border-radius-base: 12px;
-    /* Sharper, more professional */
 
     /* Transitions */
     --transition-fast: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -49,19 +48,6 @@ body {
     font-weight: 300;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://grainy-gradients.vercel.app/noise.svg');
-    opacity: 0.04;
-    pointer-events: none;
-    z-index: 9999;
-}
-
 body::after {
     content: "";
     position: fixed;
@@ -69,7 +55,9 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+    /* Subtle noise/grid overlay */
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
     background-size: 100% 3px, 3px 100%;
     pointer-events: none;
     z-index: 9998;
@@ -146,13 +134,13 @@ ul {
 }
 
 button {
-    font-family: var(--font-main);
+    font-family: var(--font-body);
     cursor: pointer;
 }
 
 /* Utilities */
 .container {
-    max-width: var(--spacing-container);
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -175,27 +163,41 @@ button {
     border-radius: var(--border-radius-base);
 }
 
-/* Tech Innovation Buttons */
+/* Tech Innovation Buttons (Refined) */
 .btn-primary {
-    background: var(--cta-color);
+    background: linear-gradient(135deg, #0066ff 0%, #00ccff 100%);
     color: white;
-    padding: 14px 28px;
+    padding: 16px 32px;
     border-radius: 50px;
-    /* Pill shape */
-    border: 2px solid var(--primary-accent);
-    font-weight: 600;
+    border: none;
+    font-weight: 700;
     font-size: 1rem;
-    transition: all var(--transition-fast);
-    box-shadow: var(--neon-glow);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0052cc 0%, #0099cc 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(0, 102, 255, 0.8), 0 0 60px rgba(0, 102, 255, 0.4);
-    background: #0052cc;
-    border-color: var(--secondary-accent);
+    box-shadow: 0 8px 30px rgba(0, 102, 255, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:hover::before {
+    opacity: 1;
 }
 
 /* Scroll Reveal Animations */

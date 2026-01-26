@@ -47,7 +47,7 @@ const Portfolio = () => {
                         <ScrollReveal key={project.id} className="project-card group" threshold={0.1} delay={index * 0.1}>
                             <div className="project-image-wrapper">
                                 <img src={project.image} alt={project.title} className="project-image" />
-                                <div className="project-overlay glass-panel">
+                                <div className="project-overlay">
                                     <div className="project-content">
                                         <span className="project-category">{project.category}</span>
                                         <h3 className="project-title">{project.title}</h3>

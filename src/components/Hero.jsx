@@ -7,7 +7,7 @@ const Hero = () => {
     return (
         <section className="hero">
             <div className="container hero-content">
-                <ScrollReveal className="hero-text-wrapper">
+                <div className="hero-text-wrapper">
                     <div className="badge glass-panel">
                         <span className="badge-dot"></span>
                         Accepting New Projects for 2026
@@ -31,11 +31,10 @@ const Hero = () => {
                             <button className="btn-secondary">Book a Call</button>
                         </Magnetic>
                     </div>
-                </ScrollReveal>
+                </div>
 
-                <ScrollReveal className="hero-visual" threshold={0.2}>
-                    <div className="glowing-orb orb-1"></div>
-                    <div className="glowing-orb orb-2"></div>
+                <div className="hero-visual">
+                    {/* Removed duplicate orbs for performance */}
                     <div className="hero-card glass-panel">
                         <div className="card-header">
                             <div className="traffic-lights">
@@ -43,10 +42,10 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className="card-body">
-                            <img src="/nano-ui-mockup.png" alt="Nano Banana Dashboard" className="hero-mockup-img" />
+                            <img src="/nano-ui-mockup.png" alt="Nano Banana Dashboard" className="hero-mockup-img" loading="eager" />
                         </div>
                     </div>
-                </ScrollReveal>
+                </div>
             </div>
         </section>
     );
