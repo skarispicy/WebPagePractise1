@@ -65,9 +65,7 @@
     gap: 16px;
 }
 
-.btn-primary {
-    /* Defined in index.css */
-}
+
 
 .btn-secondary {
     background: rgba(30, 30, 30, 0.6);
